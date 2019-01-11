@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Visreg Visualization</title>
+    <link rel="stylesheet" media="all" href="visreg.css" />
+  </head>
+  <body>
+      <!-- <img src="/Websites/4K/www-ithaca/web/themes/custom/ithaca/tests/screenshots/diff/Home%20Page_should%20look%20good_document_Chrome_1280x800.png" alt="Diff Image"> -->
+    <div class="image-comparator">
+      <div class="image-modified">
+        <img src="tests/screenshots/latest/Site%20Header%20variations_should%20look%20good_element_Chrome_600x800.png" alt="Latest Image">
+          <div class="image-original">
+            <img src="tests/screenshots/baseline/Site%20Header%20variations_should%20look%20good_element_Chrome_600x800.png" alt="Baseline Image">
+          </div>
+          <span id="cursor-ic"></span>
+          <input type="range" min="0" max="100" value="50" id="slider-ic">
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="visreg.js"></script>
+
+  </body>
+</html>
