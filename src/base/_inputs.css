@@ -1,0 +1,56 @@
+input[type=range] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  top: 0;
+  height: 100%;
+  background-color: transparent;
+  width: 102%;
+  z-index: 10;
+  transform: translateY(-50%);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    outline: none;
+    border: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 100%;
+    background: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  &::-webkit-slider-thumb:hover {
+    cursor: ew-resize;
+  }
+
+  &::-moz-range-track {
+    -moz-appearance: none;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    outline: none;
+  }
+
+  &::-moz-range-thumb {
+    -moz-appearance: none;
+    position: relative;
+    width: 100px;
+    height: 100%;
+    background: none;
+    border: none;
+    border-radius: 0;
+
+    &:hover {
+      cursor: w-resize;
+    }
+  }
+}

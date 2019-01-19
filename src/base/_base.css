@@ -1,0 +1,31 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --blue: #00ffff;
+  --cursor: #ddeeff;
+}
+
+@custom-media --small (min-width: 480px);
+
+body {
+  background: var(--blue);
+
+  @media (--small) {
+    background: var(--white);
+  }
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.image-wrapper {
+  /* width: 50vw; */
+  min-width: 280px;
+  max-width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  box-shadow: 0 0 5vh var(--black);
+}

@@ -1,84 +1,29 @@
 body {
-  background: #ffffff;
+  background: #00ffff;
+}
+
+@media (min-width: 480px) {
+
+  body {
+    background: #ffffff;
+  }
 }
 
 img {
   vertical-align: bottom;
 }
 
-.image-comparator {
+.image-wrapper {
   /* width: 50vw; */
   min-width: 280px;
   max-width: 100vw;
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%);
-  box-shadow: 0 0 5vh #000;
-}
-
-.image-modified {
-  position: relative;
-}
-.image-modified img {
-  display: inline-block;
-  /* width: 50vw; */
-  min-width: 280px;
-  max-width: 100vw;
-}
-.image-modified img:hover {
-  cursor: pointer;
-  vertical-align: bottom;
-}
-.image-modified .image-original {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 50%;
-  overflow: hidden;
-}
-.image-modified #cursor-ic {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 10%;
-  width: 10%;
-  color: white;
-  z-index: 3;
-}
-.image-modified #cursor-ic:before {
-  content: '';
-  display: block;
-  background: #def;
-  width: 2px;
-  height: 1000%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-.image-modified #cursor-ic:after {
-  content: '';
-  display: block;
-  background: url(http://www.julienlejeune.com/codepen/comparator.png) center center no-repeat #000000;
-  background-size: 24px;
-  width: 60px;
-  height: 60px;
-  border: 2px solid #def;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 4;
-}
-.image-modified #slider-ic {
-  position: absolute;
-  top: 50%;
-  width: 100%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-box-shadow: 0 0 5vh #000000;
+          box-shadow: 0 0 5vh #000000;
 }
 
 input[type=range] {
@@ -87,10 +32,11 @@ input[type=range] {
   position: relative;
   top: 0;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: transparent;
   width: 102%;
   z-index: 10;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%)
 }
 
 input[type=range]:focus {
@@ -99,20 +45,7 @@ input[type=range]:focus {
 
 input[type=range]:active {
   outline: none;
-}
-
-input[type=range]::-moz-range-track {
-  -moz-appearance: none;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0);
-  position: relative;
-  outline: none;
-}
-
-input[type=range]::active {
   border: none;
-  outline: none;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -123,8 +56,18 @@ input[type=range]::-webkit-slider-thumb {
   border: none;
   border-radius: 0;
 }
+
 input[type=range]::-webkit-slider-thumb:hover {
   cursor: ew-resize;
+}
+
+input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  position: relative;
+  outline: none;
 }
 
 input[type=range]::-moz-range-thumb {
@@ -136,6 +79,82 @@ input[type=range]::-moz-range-thumb {
   border: none;
   border-radius: 0;
 }
+
 input[type=range]::-moz-range-thumb:hover {
   cursor: w-resize;
+}
+
+.image--modified {
+  position: relative
+}
+
+.image--modified img {
+  display: inline-block;
+  width: 50vw;
+  min-width: 280px;
+  max-width: 100vw;
+}
+
+.image--modified img:hover {
+  cursor: pointer;
+  vertical-align: bottom;
+}
+
+.image--modified .image--original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  background-color: #00ffff;
+}
+
+.image--modified .cursor-ic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 10%;
+  width: 10%;
+  color: #ffffff;
+  z-index: 3;
+}
+
+.image--modified .cursor-ic:before {
+  content: '';
+  display: block;
+  background: #ddeeff;
+  width: 2px;
+  height: 1000%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 2;
+}
+
+.image--modified .cursor-ic:after {
+  content: '';
+  display: block;
+  background: url(http://www.julienlejeune.com/codepen/comparator.png) center center no-repeat #000000;
+  background-size: 24px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #ddeeff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.image--modified .slider-ic {
+  position: absolute;
+  top: 50%;
+  width: 100%;
 }

@@ -1,0 +1,25 @@
+{
+  "name": "visreg-visualization",
+  "version": "1.0.0",
+  "description": "Visual regression UI",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-postcss": "^8.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-easy-import": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ModulesUnraveled/visreg-visualization.git"
+  },
+  "author": "Brian Lewis",
+  "bugs": {
+    "url": "https://github.com/ModulesUnraveled/visreg-visualization/issues"
+  },
+  "homepage": "https://github.com/ModulesUnraveled/visreg-visualization#readme"
+}
