@@ -58,25 +58,19 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 10%;
-  width: 10%;
+  height: 100%;
   color: var(--white);
 
   &:before {
     content: '';
-    display: block;
     background: var(--cursor);
     width: 2px;
-    height: 1000%;
+    height: 100%;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateY(-50%);
   }
 
   &:after {
     content: '';
-    display: block;
     background: url(http://www.julienlejeune.com/codepen/comparator.png) center center no-repeat #000000;
     background-size: 14px;
     width: 30px;
@@ -84,8 +78,7 @@
     border: 2px solid var(--cursor);
     border-radius: 50%;
     position: absolute;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
   }
 }
