@@ -8,6 +8,7 @@
 @custom-media --small (min-width: 480px);
 
 body {
+  margin: 0;
   background: var(--blue);
 
   @media (--small) {
@@ -19,13 +20,18 @@ img {
   vertical-align: bottom;
 }
 
-.image-wrapper {
+.image-wrapper,
+.image-diff-wrapper {
   /* width: 50vw; */
   min-width: 280px;
   max-width: 100vw;
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translate(-50%);
+  /* left: 50%; */
+  /* transform: translate(-50%); */
   box-shadow: 0 0 5vh var(--black);
+}
+
+.image-wrapper {
+  right: 0;
 }

@@ -25,10 +25,10 @@ input[type=range] {
     background: none;
     border: none;
     border-radius: 0;
-  }
 
-  &::-webkit-slider-thumb:hover {
-    cursor: ew-resize;
+    &:hover {
+      cursor: ew-resize;
+    }
   }
 
   &::-moz-range-track {
