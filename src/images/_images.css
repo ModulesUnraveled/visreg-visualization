@@ -1,9 +1,31 @@
+:root {
+  --color-checker-1: #fefefe;
+  --color-checker-2: rgba(255, 255, 255, 0.4);
+}
+
+.image-wrapper,
+.image-diff-wrapper {
+  min-width: 280px;
+  max-width: 100vw;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 5vh var(--black);
+}
+
+.image-wrapper {
+  right: 4vw;
+}
+
+.image-diff-wrapper {
+  left: 4vw;
+}
+
 .image--modified {
   position: relative;
 
   & img {
     display: inline-block;
-    width: 50vw;
+    width: 44vw;
     min-width: 280px;
     max-width: 100vw;
 
@@ -20,7 +42,14 @@
     height: 100%;
     width: 50%;
     overflow: hidden;
-    background-color: var(--blue);
+    background-image:
+      linear-gradient(45deg, var(--color-checker-1) 25%, var(--color-checker-2) 25%),
+      linear-gradient(-45deg, var(--color-checker-1) 25%, var(--color-checker-2) 25%),
+      linear-gradient(45deg, var(--color-checker-2) 75%, var(--color-checker-1) 75%),
+      linear-gradient(-45deg, var(--color-checker-2) 75%, var(--color-checker-1) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+
   }
   & .cursor-ic {
     position: absolute;

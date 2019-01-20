@@ -1,14 +1,34 @@
-var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var cssnext = require('postcss-cssnext');
-var easy_import = require('postcss-easy-import');
+var gulp = require('gulp'),
+    postcss = require('gulp-postcss'),
+    cssnext = require('postcss-cssnext'),
+    easy_import = require('postcss-easy-import'),
+    watch = require('gulp-watch');
+    browserSync = require('browser-sync').create();
 
 gulp.task('css', function () {
   var processors = [
     easy_import,
     cssnext,
   ];
-  return gulp.src('./src/*.css')
-    .pipe(postcss(processors))
-    .pipe(gulp.dest('.'));
+
+  browserSync.init({
+    server: "./"
+  });
+
+  return watch('src/**/*.css', function() {
+    gulp.src('./src/*.css')
+      .pipe(postcss(processors))
+      .pipe(gulp.dest('.'))
+      .pipe(browserSync.stream());
+  });
 });
+
+// gulp.task('watch', ['css'], function() {
+//   browserSync.init({
+//       server: {
+//           baseDir: "./"
+//       }
+//   });
+// });
+
+// gulp.task('default', ['css']);
