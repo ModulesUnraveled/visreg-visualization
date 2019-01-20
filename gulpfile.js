@@ -22,13 +22,3 @@ gulp.task('css', function () {
       .pipe(browserSync.stream());
   });
 });
-
-// gulp.task('watch', ['css'], function() {
-//   browserSync.init({
-//       server: {
-//           baseDir: "./"
-//       }
-//   });
-// });
-
-// gulp.task('default', ['css']);
