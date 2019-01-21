@@ -15,10 +15,10 @@ gulp.task('css', function () {
     server: "./"
   });
 
-  return watch('src/**/*.css', function() {
-    gulp.src('./src/*.css')
+  // return watch('src/**/*.css', function() {
+  return gulp.src('./src/*.css')
       .pipe(postcss(processors))
-      .pipe(gulp.dest('.'))
+      .pipe(gulp.dest('./dist'))
       .pipe(browserSync.stream());
-  });
+  // });
 });
