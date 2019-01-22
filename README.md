@@ -5,6 +5,6 @@ This is a tool to visualize the results of your visual regression tests.
 - `npm install`
 
 ## Usage
-- `gulp css`
+- `gulp`
 
 This will start a browsersync session that watches for changes to any css files in the src directory.
